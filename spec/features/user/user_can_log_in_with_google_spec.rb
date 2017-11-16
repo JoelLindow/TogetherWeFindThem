@@ -1,5 +1,20 @@
 require 'rails_helper'
 
+RSpec.feature "user logs in" do
+  scenario "using google oauth2 'omniauth'" do
+    stub_omniauth
+
+    visit root_path
+
+    expect(page).to have_link("Sign in with Google")
+
+    click_link "Sign in with Google"
+
+    expect(page).to have_content("Sam Lim")
+    expect(page).to have_content("Logout")
+  end
+end
+
 def stub_omniauth
   OmniAuth.config.test_mode = true
   OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
@@ -17,18 +32,3 @@ def stub_omniauth
       }
     })
   end
-
-RSpec.feature "user logs in" do
-  scenario "using google oauth2 'omniauth'" do
-    stub_omniauth
-
-    visit root_path
-
-    expect(page).to have_link("Sign in with Google")
-
-    click_link "Sign in with Google"
-
-    expect(page).to have_content("Sam Lim")
-    expect(page).to have_content("Logout")
-  end
-end
