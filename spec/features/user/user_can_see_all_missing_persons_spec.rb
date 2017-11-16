@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'user visits site' do
   it 'navigates to /missing and can see all missing persons' do
-    person1 = MissingPerson.new(
+    person1 = MissingPerson.create!(
                                 first_name: "John",
                                 last_name: "Doe",
                                 age: 21,
@@ -18,9 +18,9 @@ describe 'user visits site' do
                                 last_seen_with: "Uncle Joey",
                                 other_information: "Last seen in Uncle Joeys Black Monte Carlo")
 
-    person2 = MissingPerson.new(
+    person2 = MissingPerson.create!(
                                 first_name: "Jane",
-                                last_name: "Doe",
+                                last_name: "Dae",
                                 age: 18,
                                 sex: "Female",
                                 eye_color: "Brown",
@@ -44,8 +44,12 @@ describe 'user visits site' do
     # and I click on the "Help Find Us" link
     click_on "Help Find Us"
     # and I'm taken to the '/missing' page
-    expect(current_path).to eq('/missing')
+    expect(current_path).to eq(missing_persons_path)
     # and I see a collection of pictures and names of missing people
-
+    expect(page).to have_css(".missing_person_card")
+    expect(page).to have_css(".person_image")
+    expect(page).to have_css(".person_name")
+    expect(page).to have_content("John Doe")
+    expect(page).to have_content("Jane Dae")
   end
 end
