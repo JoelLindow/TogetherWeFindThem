@@ -40,11 +40,11 @@ describe 'user visits site' do
     # and I click on the "Continue as unregistered user" link
     click_on "Continue as unregistered user"
     # Then I am taken to the dashboard page
-    expect(current_path).to be('/dashboard')
+    expect(current_path).to eq(dashboard_index_path)
     # and I click on the "Help Find Us" link
     click_on "Help Find Us"
     # and I'm taken to the '/missing' page
-    expect(current_path).to be('/missing')
+    expect(current_path).to eq('/missing')
     # and I see a collection of pictures and names of missing people
 
   end
