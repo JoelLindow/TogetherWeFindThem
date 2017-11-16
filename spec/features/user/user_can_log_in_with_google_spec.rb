@@ -17,7 +17,7 @@ RSpec.feature "user logs in" do
 
     click_link "Sign in with Google"
 
-    expect(page).to have_content("John Doe")
+    expect(page).to have_content("Sam Lim")
     expect(page).to have_content("Logout")
   end
 end
