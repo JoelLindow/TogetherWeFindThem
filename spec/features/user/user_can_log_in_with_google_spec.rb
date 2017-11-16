@@ -16,7 +16,7 @@ def stub_omniauth
         expires_at: DateTime.now,
       }
     })
-  end
+end
 
 RSpec.feature "user logs in" do
   scenario "using google oauth2 'omniauth'" do
