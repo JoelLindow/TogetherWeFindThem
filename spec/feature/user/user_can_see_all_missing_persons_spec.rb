@@ -36,7 +36,7 @@ describe 'user visits site' do
 
     # as an unregistered user
     # when I visit '/'
-    visit('/')
+    visit root_path
     # and I click on the "Continue as unregistered user" link
     click_on "Continue as unregistered user"
     # Then I am taken to the dashboard page
