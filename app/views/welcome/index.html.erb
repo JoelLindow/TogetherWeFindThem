@@ -1,27 +1,25 @@
-<h1>THIS IS THE ROOT PAGE</h1>
-<<<<<<< HEAD
+<h1>Together We Find Them</h1>
 <% if current_user  %>
-  <h3>Welcome, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
-  <%= link_to "Logout", logout_path %>
+  <div class="greeting_root_block">
+    <h3>Welcome, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
+  </div>
+
+  <div class="missing_persons_root_block">
+    <%= link_to "Continue as #{current_user.first_name} #{current_user.last_name}", '/dashboard' %>
+  </div>
+
+  <div class="logout_link"
+    <%= link_to "Logout", logout_path %>
+  </div>
+
 <% else %>
-  <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
-  <%= link_to "Continue as unregistered user", '/dashboard' %>
+
+  <div class="login_create_root_block">
+    <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
+    <%= link_to "Continue as unregistered user", '/dashboard' %>
+  </div>
 <% end %>
-=======
-
-<div class="greeting_root_block">
-
-</div>
-
-<div class="missing_persons_root_block">
-  <%= link_to "Continue as unregistered user", '/dashboard' %>
-</div>
 
 <div class="visit_blog_root_block">
   Visit the Blog  --- This will become a link
 </div>
-
-<div class="login_create_root_block">
-  Login or Create Account  --- This will become a link
-</div>
->>>>>>> 2390bcdecd8596b21ee14c070c4e3ffbc00c0b44
