@@ -3,8 +3,9 @@ JoelLindow@Gmail.com to get access to the repository and the
 Workflow Tracking tool. There will be user stories waiting.
 
 
+# ALL WORK TO  BE MERGED TO DEVELOPMENT BRANCH! ONLY ADMIN OF REPO MAY MERGE TO MASTER! NEVER WORK ON MASTER!
 
-# README
+### README WILL BE UPDATED AS DEVELOPMENT BEGINS
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

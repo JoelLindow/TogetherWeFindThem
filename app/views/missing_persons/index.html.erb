@@ -1,0 +1,11 @@
+<h1>THIS IS THE MISSING PERSONS INDEX</h1>
+
+<% @missing_persons.each do |person| %>
+
+<div class="missing_person_card">
+  <div class="person_image">
+    <img src="http://splashpaddubai.com/wp-content/uploads/2015/08/placeholder-300x300.jpg" alt="PLACEHOLDER IMAGE">
+  </div>
+  <h3 class="person_name"><%= person.first_name + " " + person.last_name %></h3>
+</div>
+<% end %>
