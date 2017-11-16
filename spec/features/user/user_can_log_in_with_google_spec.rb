@@ -12,7 +12,7 @@ def stub_omniauth
       },
       credentials: {
         token: "abcdefg12345",
-        refresh_token: "REFRESH_TOKEN",
+        refresh_token: "abcdefg12345",
         expires_at: DateTime.now,
       }
     })
