@@ -3,9 +3,20 @@ require 'rails_helper'
 def stub_omniauth
   OmniAuth.config.test_mode = true
   OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
-
+    provider: "google_oauth2",
+      uid: "12345678910",
+      info: {
+        email: "limsammy1@gmail.com",
+        first_name: "Sam",
+        last_name: "Lim"
+      },
+      credentials: {
+        token: "abcdefg12345",
+        refresh_token: "REFRESH_TOKEN",
+        expires_at: DateTime.now,
+      }
     })
-end
+  end
 
 RSpec.feature "user logs in" do
   scenario "using google oauth2 'omniauth'" do
