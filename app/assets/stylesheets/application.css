@@ -12,6 +12,14 @@
  *
  *= require bootstrap-theme.min.css
  *= require bootstrap.min.css
+ *= require chosen
  *= require_tree .
  *= require_self
  */
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}

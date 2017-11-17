@@ -14,13 +14,23 @@
     <nav class="navbar navbar-default">
       <a class="navbar-brand" href="/">Together We Find Them</a>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <% if current_user %>
+        <% if current_user %>
+
+          <li>
+            <%= link_to 'Mailbox', conversations_path %>
+          </li>
+
+          <li>
             <%= link_to "Logout", logout_path %>
+          </li>
+
           <% else %>
+
+          <li>
             <%= link_to "Members Login", login_path %>
-          <% end %>
-        </li>
+          </li>
+
+        <% end %>
       </ul>
     </nav>
   </header>
