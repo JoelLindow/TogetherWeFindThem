@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'login',                    to: 'welcome#login'
   get 'logout',                   to: 'sessions#destroy'
 
-  resources :conversations, only: [:index, :show, :destroy]
+  resources :conversations, only: [:index, :show, :destroy, :new]
   resources :users, only: [:show]
   resources :dashboard, only: [:index]
   resources :missing_persons
