@@ -18,7 +18,6 @@ describe 'user visits root path' do
     expect(page).to have_css('.login_create_root_block')
     expect(page).to have_content("Login")
     # And I see a button to 'log in' on the navbar (log in button is not required to function in this user story)
-    save_and_open_page
 
     expect(page).to have_content("Members Login")
   end
