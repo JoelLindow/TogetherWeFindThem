@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   resources :messages, only: [:new, :create]
   resources :users, only: [:show]
   resources :dashboard, only: [:index]
-  resources :missing_persons
+  resources :missing_people
 
 end

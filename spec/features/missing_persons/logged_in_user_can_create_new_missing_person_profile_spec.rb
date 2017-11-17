@@ -25,7 +25,7 @@ describe "Logged in user creates a new user profile" do
     fill_in "missing_person[other_information]", with: "Extra Details Listed Here"
     click_button "Create Profile"
 
-    expect(current_path).to eq("/missing_persons/#{MissingPerson.last.id}")
+    expect(current_path).to eq("/missing_people/#{MissingPerson.last.id}")
 
     expect(page).to have_content("John Doe")
     expect(page).to have_content("16")

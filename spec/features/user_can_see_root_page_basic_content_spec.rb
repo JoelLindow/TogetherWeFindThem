@@ -12,7 +12,7 @@ describe 'user visits root path' do
     expect(current_path).to eq '/dashboard'
     # expect(page).to have_css('.greeting_dashboard_block')
     # and I see a link to go to the list of missing persons (does not need to function in this story)
-    expect(page).to have_css('.missing_persons_dashboard_block')
+    expect(page).to have_css('.missing_people_dashboard_block')
     # and I see a place to click and go to the site blog (does not need to function in this story)
     expect(page).to have_css('.visit_blog_dashboard_block')
     expect(page).to have_content("Visit the Blog")
