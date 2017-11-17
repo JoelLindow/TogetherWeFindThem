@@ -34,6 +34,7 @@ gem 'turbolinks', '~> 5'
 # gem 'capistrano-rails', group: :development
 # OUR CUSTOM ADDED GEMS
 gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
 gem 'figaro'
 gem 'mailboxer'
 gem 'simple_form'
