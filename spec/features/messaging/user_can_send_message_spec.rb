@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "user can send a message to another user" do
   describe "user navigates to other user's page" do
     it "user sees user info" do
-      receipient = User.create(first_name: 'John', last_name: 'Doe', name: 'John Doe')
+      receipient = User.create(first_name: 'John', last_name: 'Doe')
 
       stub_omniauth
 
@@ -17,6 +17,7 @@ RSpec.feature "user can send a message to another user" do
     end
 
     it "user sees send message link in mailbox" do
+      user = User.create!(first_name: 'Test', last_name: 'Test')
       stub_omniauth
 
       visit login_path
@@ -24,8 +25,19 @@ RSpec.feature "user can send a message to another user" do
 
       visit conversations_path
 
-
       expect(page).to have_content("Send Message")
+
+      click_on "Send Message"
+
+      fill_in 'Subject', with: 'Test Subject'
+      fill_in 'Message', with: 'Test Message'
+
+      select user.name, from: 'recipients'
+
+      click_on "Send"
+
+      expect(page).to have_content("Test Subject")
+      expect(page).to have_content("Test Message")
     end
   end
 end
