@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback',  to: 'sessions#create'
   get 'login',                    to: 'welcome#login'
   get 'logout',                   to: 'sessions#destroy'
-  get 'create_account',           to: 'users#new'
 
+  resources :users, only: [:show]
   resources :dashboard, only: [:index]
   resources :missing_persons
 
