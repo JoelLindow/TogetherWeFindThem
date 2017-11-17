@@ -57,6 +57,10 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    chosen-rails (1.5.2)
+      coffee-rails (>= 3.2)
+      railties (>= 3.0)
+      sass-rails (>= 3.2)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -238,6 +242,7 @@ DEPENDENCIES
   bootstrap-will_paginate
   byebug
   capybara
+  chosen-rails
   coffee-rails (~> 4.2)
   figaro
   jquery-rails
