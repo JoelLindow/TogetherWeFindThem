@@ -1,6 +1,14 @@
 class User < ApplicationRecord
   acts_as_messageable
 
+  def name
+    name
+  end
+
+  def mailboxer_email(object)
+    email
+  end
+
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
     user.attributes = {
