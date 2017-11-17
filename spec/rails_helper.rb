@@ -76,3 +76,22 @@ def stub_omniauth
       }
     })
 end
+
+def stub_facebook
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
+    provider: "facebook",
+      uid: "12345678910",
+      info: {
+        email: "limsammy1@gmail.com",
+        first_name: "Sam",
+        last_name: "Lim"
+      },
+      credentials: {
+        token: "abcdefg12345",
+        refresh_token: "abcdefg12345",
+        expires_at: DateTime.now,
+        expires: true
+      }
+    })
+end
