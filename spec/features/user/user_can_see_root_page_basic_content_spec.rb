@@ -9,7 +9,6 @@ describe 'user visits root path' do
     # I see a greeting and a mission statement
     expect(page).to have_css('.greeting_root_block')
     # and I see a link to go to the list of missing persons (does not need to function in this story)
-    expect(page).to have_css('.missing_persons_root_block')
     expect(page).to have_content("Continue as unregistered user")
     # and I see a place to click and go to the site blog (does not need to function in this story)
     expect(page).to have_css('.visit_blog_root_block')
