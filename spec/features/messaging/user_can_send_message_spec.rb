@@ -5,10 +5,7 @@ RSpec.feature "user can send a message to another user" do
     it "user sees user info" do
       receipient = User.create(first_name: 'John', last_name: 'Doe')
 
-      stub_omniauth
-
-      visit login_path
-      click_link "Sign in with Google"
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(receipient)
 
       visit user_path(receipient)
 
@@ -18,10 +15,8 @@ RSpec.feature "user can send a message to another user" do
 
     it "user sees send message link in mailbox" do
       user = User.create!(first_name: 'Test', last_name: 'Test')
-      stub_omniauth
 
-      visit login_path
-      click_link "Sign in with Google"
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit conversations_path
 
