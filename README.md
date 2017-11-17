@@ -10,6 +10,13 @@ Workflow Tracking tool. There will be user stories waiting.
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+#### How to setup
+
+1. Clone repo
+2. Bundle install
+3. run `rake db prepare`
+4. run `bundle exec figaro install` <= might not be nessecary after first time setup
+
 Things you may want to cover:
 
 * Ruby version

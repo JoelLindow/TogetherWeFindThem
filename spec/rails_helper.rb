@@ -58,3 +58,60 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+def stub_omniauth
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+    provider: "google_oauth2",
+      uid: "12345678910",
+      info: {
+        email: "limsammy1@gmail.com",
+        first_name: "Sam",
+        last_name: "Lim"
+      },
+      credentials: {
+        token: "abcdefg12345",
+        refresh_token: "abcdefg12345",
+        expires_at: DateTime.now,
+      }
+    })
+end
+
+def stub_facebook
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
+    provider: "facebook",
+      uid: "12345678910",
+      info: {
+        email: "limsammy1@gmail.com",
+        first_name: "Sam",
+        last_name: "Lim"
+      },
+      credentials: {
+        token: "abcdefg12345",
+        refresh_token: "abcdefg12345",
+        expires_at: DateTime.now,
+        expires: true
+      }
+    })
+end
+
+def stub_twitter
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+    provider: "twitter",
+      uid: "12345678910",
+      info: {
+        email: "limsammy1@gmail.com",
+        nickname: 'sammylim',
+        first_name: "Sam",
+        last_name: "Lim"
+      },
+      credentials: {
+        token: "abcdefg12345",
+        refresh_token: "abcdefg12345",
+        expires_at: DateTime.now,
+        expires: true
+      }
+    })
+end

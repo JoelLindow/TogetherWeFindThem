@@ -32,6 +32,17 @@ gem 'turbolinks', '~> 5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# OUR CUSTOM ADDED GEMS
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'figaro'
+gem 'mailboxer'
+gem 'simple_form'
+gem 'jquery-rails'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'chosen-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
