@@ -35,6 +35,7 @@ gem 'turbolinks', '~> 5'
 # OUR CUSTOM ADDED GEMS
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 gem 'figaro'
 gem 'mailboxer'
 gem 'simple_form'

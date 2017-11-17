@@ -95,3 +95,23 @@ def stub_facebook
       }
     })
 end
+
+def stub_twitter
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+    provider: "twitter",
+      uid: "12345678910",
+      info: {
+        email: "limsammy1@gmail.com",
+        nickname: 'sammylim',
+        first_name: "Sam",
+        last_name: "Lim"
+      },
+      credentials: {
+        token: "abcdefg12345",
+        refresh_token: "abcdefg12345",
+        expires_at: DateTime.now,
+        expires: true
+      }
+    })
+end
