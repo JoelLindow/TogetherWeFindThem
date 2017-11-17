@@ -4,7 +4,7 @@ class MissingPersonsController < ApplicationController
   end
 
   def show
-    # @missing_person = MissingPerson.find(params[:id])
+    @person = MissingPerson.find(params[:id])
   end
 
 end
