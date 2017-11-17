@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'auth/:provider/callback',  to: 'sessions#create'
+  get 'login',                    to: 'welcome#login'
   get 'logout',                   to: 'sessions#destroy'
   get 'create_account',           to: 'users#new'
 

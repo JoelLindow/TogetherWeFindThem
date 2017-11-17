@@ -4,17 +4,15 @@ RSpec.feature "visitor visits /" do
   scenario "visitor sees navbar and login button" do
     visit root_path
 
-    expect(page).to have_css('div navbar')
-
-    within(:css, "div#navbar") do
-      expect(page).to have_content("Login")
+    within(:css, ".navbar") do
+      expect(page).to have_content("Members Login")
     end
   end
 
   scenario "visitor clicks login button" do
     visit root_path
 
-    click_link "Login"
+    click_link "Members Login"
 
     expect(current_path).to eq(login_path)
   end
@@ -30,7 +28,7 @@ RSpec.feature "visitor visits /" do
 
     expect(page).to have_content("Welcome back, Sam Lim!")
     expect(page).to have_content("Logout")
-    expect(current_path).to eq(dashboard_path)
+    expect(current_path).to eq(dashboard_index_path)
   end
 end
 
