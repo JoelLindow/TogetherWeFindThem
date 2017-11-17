@@ -50,7 +50,7 @@ describe "user visits dashboard" do
     expect(page).to have_content("Last Seen With:")
     expect(page).to have_content("Uncle Joey. 6foot 3inches albino with red hair")
     # and I see other information about the person (this is where people add any other details they think might be important)
-    expect(page).to have_content("Other Information:")
+    expect(page).to have_content("Other information you should know:")
     expect(page).to have_content("Last seen in Uncle Joeys Black Monte Carlo")
   end
 end
