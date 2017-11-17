@@ -15,12 +15,22 @@
       <a class="navbar-brand" href="/">Together We Find Them</a>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
+
+          <li>
+            <%= link_to 'Mailbox', conversations_path %>
+          </li>
+
           <li>
             <%= link_to "Logout", logout_path %>
-          <% else %>
-            <%= link_to "Members Login", login_path %>
-        <% end %>
           </li>
+
+          <% else %>
+
+          <li>
+            <%= link_to "Members Login", login_path %>
+          </li>
+
+        <% end %>
       </ul>
     </nav>
   </header>
