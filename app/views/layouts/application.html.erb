@@ -8,11 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header>
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
     <nav class="navbar navbar-default">
       <a class="navbar-brand" href="/">Together We Find Them</a>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to "Members Login", '/' %>
+          <% if current_user %>
+            <%= link_to "Logout", logout_path %>
+          <% else %>
+            <%= link_to "Members Login", login_path %>
+          <% end %>
         </li>
       </ul>
     </nav>

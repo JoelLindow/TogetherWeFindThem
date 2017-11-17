@@ -4,7 +4,7 @@ RSpec.feature "user logs in" do
   scenario "using google oauth2 'omniauth'" do
     stub_omniauth
 
-    visit root_path
+    visit login_path
 
     expect(page).to have_link("Sign in with Google")
 
