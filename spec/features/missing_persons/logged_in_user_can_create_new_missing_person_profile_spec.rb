@@ -1,17 +1,7 @@
 require 'rails_helper'
 
 describe "Logged in user creates a new user profile" do
-
-  xit "a non-logged in user can not create new missing person profile" do
-    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
-    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
-    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
-    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
-    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
-  end
-
   it "a user can create a new user profile" do
-    #USER MUST BE LOGGED IN
     # user = User.create!(first_name: "Bob", last_name: "Johnson")
     #
     # allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
@@ -51,5 +41,13 @@ describe "Logged in user creates a new user profile" do
     expect(page).to have_content("Extra Details Listed Here")
 
     expect(MissingPerson.all.count).to eq(1)
+  end
+
+  xit "a non-logged in user can not create new missing person profile" do
+    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
+    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
+    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
+    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
+    puts "!!!!!!!!!!!! NEED TO WRITE IN AUTHENTICAION FOR THIS TO WORK"
   end
 end
