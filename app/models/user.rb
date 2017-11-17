@@ -2,7 +2,7 @@ class User < ApplicationRecord
   acts_as_messageable
 
   def name
-    name
+    return first_name + ' ' + last_name
   end
 
   def mailboxer_email(object)
@@ -20,7 +20,7 @@ class User < ApplicationRecord
       token: auth[:credentials][:token],
       refresh_token: auth[:credentials][:refresh_token],
       oauth_expires_at: auth[:credentials][:expires_at],
-      name: auth[:info][:first_name] + ' ' + auth[:info][:last_name]
+      # name: auth[:info][:first_name] + ' ' + auth[:info][:last_name]
     }
     user.save!
     user
