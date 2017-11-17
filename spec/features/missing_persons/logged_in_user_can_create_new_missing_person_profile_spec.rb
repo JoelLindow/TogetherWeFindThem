@@ -8,6 +8,7 @@ describe "Logged in user creates a new user profile" do
 
     visit new_missing_person_path
 
+
     fill_in "missing_person[first_name]", with: "John"
     fill_in "missing_person[last_name]", with: "Doe"
     fill_in "missing_person[age]", with: 16
