@@ -1,0 +1,48 @@
+<h1>Create a New Missing Person Profile</h1>
+
+<%= form_for @missing_person do |f| %>
+
+<%= f.label :first_name %><br>
+<%= f.text_field :first_name %><br>
+
+<%= f.label :last_name %><br>
+<%= f.text_field :last_name %><br>
+
+<%= f.label :age %><br>
+<%= f.text_field :age %><br>
+
+<%= f.label :sex %><br>
+<%= f.password_field :sex %><br>
+
+<%= f.label :eye_color %><br>
+<%= f.text_field :eye_color %><br>
+
+<%= f.label :hair_color %><br>
+<%= f.text_field :hair_color %><br>
+
+<%= f.label :skin_color %><br>
+<%= f.text_field :skin_color %><br>
+
+<%= f.label :race %><br>
+<%= f.text_field :race %><br>
+
+<%= f.label :other_physical_features %><br>
+<%= f.text_area :other_phys_features %><br>
+
+<%= f.label :last_seen_city %><br>
+<%= f.text_area :last_seen_city %><br>
+
+<%= f.label :last_seen_state %><br>
+<%= f.text_area :last_seen_state %><br>
+
+<%= f.label :last_seen_place %><br>
+<%= f.text_area :last_seen_place %><br>
+
+<%= f.label :last_seen_with %><br>
+<%= f.text_area :last_seen_with %><br>
+
+<%= f.label :other_information %><br>
+<%= f.text_area :other_information %><br>
+
+<%= f.submit "Create Profile" %><br>
+<% end %>
