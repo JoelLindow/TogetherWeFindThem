@@ -31,4 +31,4 @@ def stub_omniauth
         expires_at: DateTime.now,
       }
     })
-  end
+end
