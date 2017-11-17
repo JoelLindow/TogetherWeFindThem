@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "visitor visits /" do
   scenario "visitor sees navbar and login button" do
-    visit root_path
+    visit login_path
 
     within(:css, ".navbar") do
       expect(page).to have_content("Members Login")
@@ -11,7 +11,7 @@ RSpec.feature "visitor visits /" do
 
   scenario "visitor clicks login button" do
     visit root_path
-
+    
     click_link "Members Login"
 
     expect(current_path).to eq(login_path)
