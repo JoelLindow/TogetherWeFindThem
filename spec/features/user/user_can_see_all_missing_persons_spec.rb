@@ -44,7 +44,7 @@ describe 'user visits site' do
     # and I click on the "Help Find Us" link
     click_on "Help Find Us"
     # and I'm taken to the '/missing' page
-    expect(current_path).to eq(missing_persons_path)
+    expect(current_path).to eq(missing_people_path)
     # and I see a collection of pictures and names of missing people
     expect(page).to have_css(".missing_person_card")
     expect(page).to have_css(".person_image")

@@ -23,11 +23,11 @@ describe "user visits dashboard" do
     # and I click on the "Help Find Us" link
     click_link("Help Find Us")
     # and I am taken to the '/missing' page
-    expect(current_path).to eq('/missing_persons')
+    expect(current_path).to eq('/missing_people')
     # Then I click on the name of a person listed
     click_link("John Doe")
     # and I am taken to that person's individual showpage '/missing/slugged-name'
-    expect(current_path).to eq("/missing_persons/#{person.id}")
+    expect(current_path).to eq("/missing_people/#{person.id}")
     # and I see the missing persons picture
     expect(page).to have_css(".person_image")
     # and I see the missing persons name (combo of first name and last name)
