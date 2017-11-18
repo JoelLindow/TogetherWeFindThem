@@ -10,7 +10,7 @@ RSpec.feature "user can view sentbox" do
 
       visit conversations_path
 
-      expect(page).to have_content("Sent Messages")
+      expect(page).to have_content("Sent")
     end
 
     it "user clicks sentbox and views it" do
@@ -21,7 +21,7 @@ RSpec.feature "user can view sentbox" do
 
       visit conversations_path
 
-      click_link "Sent Messages"
+      click_link "Sent"
 
       expect(current_path).to eq(conversations_path)
     end
